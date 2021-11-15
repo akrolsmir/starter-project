@@ -1,11 +1,35 @@
-# Vue 3 + Typescript + Vite
+# Austin's Starter Project Template
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Usage
 
-## Recommended IDE Setup
+1. Clone this repository
+2. `yarn`
+3. `yarn dev` to start development
+4. Setup Firebase
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## Setting up Firebase
 
-## Type Support For `.vue` Imports in TS
+1. Go to https://console.firebase.google.com/ and create a new project
+1. Go to Project Settings and add Firebase to your web app
+   a. Copy firebaseConfig to `src/network/init.ts`
+1. Create a Firestore Database
+   a. Create a new collection called `users`
+   b. Set up the security rules (see `src/network/example-rules.txt`)
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+1. Enable Authetication & Google auth
+
+## Built on top of
+
+- [VueJS](https://v3.vuejs.org/guide/introduction.html) on the frontend
+- [Vite](https://vitejs.dev/) for bundling and serving
+- [TailwindCSS](https://tailwindcss.com/) for styling
+  - [WindiCSS](https://windicss.org/) specifically for faster loading times
+  - [DaisyUI](https://daisyui.com/) for a default set of components
+- [Firestore](https://firebase.google.com/docs/firestore) for the database
+- [Firebase Auth](https://firebase.google.com/docs/auth) for login
+
+### TODOs:
+
+- [Netlify](https://www.netlify.com/) for hosting
+- [Stripe](https://stripe.com/) for payments
+- [Mailjet](https://www.mailjet.com/) for marketing & transactional emails
