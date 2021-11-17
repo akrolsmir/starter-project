@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite --open",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "parse": "node scripts/parse.js"
   },
   "dependencies": {
     "daisyui": "^1.16.0",
@@ -13,6 +14,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",
+    "jssoup": "^0.0.15",
     "typescript": "^4.4.3",
     "vite": "^2.6.4",
     "vite-plugin-windicss": "^1.4.12",
